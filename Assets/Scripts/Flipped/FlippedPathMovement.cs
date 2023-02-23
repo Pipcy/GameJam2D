@@ -6,15 +6,20 @@ public class FlippedPathMovement : MonoBehaviour
     private float speed = 7;
     private float moveSpeed = 10;
     private Rigidbody2D body;
+    private Animator anim;
     private bool grounded; 
     private bool levelEnd; 
     private bool controlChange;
     //for checkpoint
     private Transform currentCheckpoint;
+    
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        Cursor.visible = false;
+
     }
 
     // Update is called once per frame
@@ -22,14 +27,18 @@ public class FlippedPathMovement : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         body.velocity = new Vector2 (horizontalInput * -speed, body.velocity.y);
-
+        anim.SetBool("run", horizontalInput != 0);
             if (Input.GetKey(KeyCode.Space) && grounded)
             {
                 Jump();
             }
+        
+             
 
             if (controlChange)
             {
+
+
                 speed = 0;
                 Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePosition.z = Camera.main.transform.position.z + Camera.main.nearClipPlane;
@@ -77,7 +86,7 @@ public class FlippedPathMovement : MonoBehaviour
         controlChange = true;
     }
 
-    //detect checkpoint
+    //detect checkpoints
     private void OnTriggerEnter2D(Collider2D collision) 
     {
         if(collision.transform.tag == "checkpoint") 
@@ -87,6 +96,7 @@ public class FlippedPathMovement : MonoBehaviour
         }
     }
 
+    
     
     
 }

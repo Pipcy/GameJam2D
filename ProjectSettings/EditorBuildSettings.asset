@@ -39,6 +39,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Ending.unity
     guid: 9bbd2ff7117ec4eae858165fa2345a95
   - enabled: 1
+    path: Assets/Scenes/credit.unity
+    guid: 101d24505135a214080fce06138ad29f
+  - enabled: 1
+    path: Assets/Scenes/Frownu Terminal.unity
+    guid: daba690d296d4431d8a9473b876f48e2
+  - enabled: 1
+    path: Assets/Scenes/Frowny.unity
+    guid: afe7c16eaf9690547b26ca5de46f8ee0
+  - enabled: 1
     path: Assets/Scenes/Dead.unity
     guid: 88047e94539e44a669099d2d63398115
   m_configObjects: {}

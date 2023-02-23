@@ -33,7 +33,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
-    
+        //flipping
+        if(horizontalInput > 0.01f)
+             transform.localScale = new Vector3 (7, 7, 7);
+            else if (horizontalInput < -0.01f)
+             transform.localScale = new Vector3(-7, 7, 7);
         if (levelEnd) 
             SceneManager.LoadScene(sceneName: "FakeWin");
 

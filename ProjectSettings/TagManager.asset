@@ -9,6 +9,7 @@ TagManager:
   - EndWall
   - ControlChange
   - checkpoint
+  - Frownu
   layers:
   - Default
   - TransparentFX
@@ -45,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: cursor
+    uniqueID: 44198429
     locked: 0

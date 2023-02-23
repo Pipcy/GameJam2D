@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;//****
 public class Menu : MonoBehaviour
 {
 
+
     public void loadMenu() {
         SceneManager.LoadScene("Menu"); }
 
@@ -27,6 +28,12 @@ public class Menu : MonoBehaviour
 
     public void loadEnding() {
         SceneManager.LoadScene("Ending"); }
+
+    public void loadCredit() {
+        SceneManager.LoadScene("credit"); }
+
+    public void loadFrowny() {
+        SceneManager.LoadScene(11);}
 
     
 
